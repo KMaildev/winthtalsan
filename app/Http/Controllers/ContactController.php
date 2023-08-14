@@ -27,6 +27,6 @@ class ContactController extends Controller
         $contact->message = $request->message;
         $contact->submit_date = date('Y-m-d');
         $contact->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Thank you for your contact. our team is ready to response all your queries.');
     }
 }

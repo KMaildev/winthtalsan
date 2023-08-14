@@ -8,7 +8,7 @@
     <meta name="description" content>
     <meta name="keywords" content>
     <title>
-        Wint Ttal San Co.,Ltd @yield('title')
+        Wint Htal San Co.,Ltd @yield('title')
     </title>
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">

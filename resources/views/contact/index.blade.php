@@ -101,12 +101,13 @@
                     <div class="col-lg-7 align-self-center">
                         <div class="contact-form">
                             <div class="contact-form-header">
-                                <h2>Get In Touch</h2>
-                                <p>It is a long established fact that a reader will be distracted by the readable
-                                    content of a page randomised words which don't look even slightly when looking at its
-                                    layout. </p>
+                                <h2>Interested in discussing?</h2>
+                                <p>
+                                    Alternatively, you may contact us by filling up the contact form. Our team will response
+                                    you shortly.
+                                </p>
                             </div>
-                            <form class="cons-contact-form" method="post" action="{{ route('contact.store') }}">
+                            <form autocomplete="off" class="cons-contact-form" method="post" action="{{ route('contact.store') }}">
                                 @csrf
                                 <div class="row">
 
@@ -161,8 +162,9 @@
 
     <div class="contact-map">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194156103!2d-74.03927096447748!3d40.759040329405195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a01c8df6fb3cb8!2sSolomon%20R.%20Guggenheim%20Museum!5e0!3m2!1sen!2sbd!4v1619410634508!5m2!1sen!2s"
-            style="border:0;" allowfullscreen loading="lazy"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d516.1122235554395!2d96.17087433923224!3d16.881355276831027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c19351ce267441%3A0xe9af5a652f382ea!2sWint%20Hte%20San%20Construction%20%26%20Home%20Decoration%20Co.%2CLtd!5e0!3m2!1sen!2smm!4v1692030956513!5m2!1sen!2smm"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
 @endsection

@@ -93,17 +93,13 @@
                                 Gallery & Activities
                             </a>
                             <ul class="dropdown-menu fade-down">
-                                <li>
-                                    <a class="dropdown-item" href="service.html">
-                                        Labour Activities
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" href="service.html">
-                                        Design
-                                    </a>
-                                </li>
+                                @foreach ($categories as $category)
+                                    <li class="dropdown-item">
+                                        <a href="{{ route('activities.show', $category->id) }}">
+                                            {{ $category->title ?? '' }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </li>
 
