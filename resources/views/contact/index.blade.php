@@ -2,11 +2,11 @@
 @section('title', '- Contact us')
 @section('content')
 
-    <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.jpg)">
+    <div class="site-breadcrumb" style="background: url({{ asset('data/contact_banner.webp') }})">
         <div class="container">
             <h2 class="breadcrumb-title">Contact Us</h2>
             <ul class="breadcrumb-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{{ route('home') }}">Home</a></li>
                 <li class="active">Contact Us</li>
             </ul>
         </div>
@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="contact-img">
-                            <img src="assets/img/contact/01.jpg" alt>
+                            <img src="{{ asset('data/company.jpg') }}" alt>
                         </div>
                     </div>
                     <div class="col-lg-7 align-self-center">
@@ -107,7 +107,8 @@
                                     you shortly.
                                 </p>
                             </div>
-                            <form autocomplete="off" class="cons-contact-form" method="post" action="{{ route('contact.store') }}">
+                            <form autocomplete="off" class="cons-contact-form" method="post"
+                                action="{{ route('contact.store') }}">
                                 @csrf
                                 <div class="row">
 

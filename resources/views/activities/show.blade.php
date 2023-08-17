@@ -2,10 +2,11 @@
 @section('title', '- Contact us')
 @section('content')
 
-    <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.jpg)">
+    <div class="site-breadcrumb" style="background: url({{ asset('data/gallery_banner.jpg') }})">
         <div class="container">
             <h2 class="breadcrumb-title">
-                Gallery & Activities
+                {{-- Gallery & Activities --}}
+                <br><br>
             </h2>
             <ul class="breadcrumb-menu">
                 <li><a href="{{ route('home') }}">Home</a></li>
@@ -35,7 +36,8 @@
                     <div class="filter-control">
                         <ul class="filter-btn">
                             @foreach ($categories as $cat)
-                                <li onclick="searchByCategory({{ $cat->id }})" class="@if ($cat->title == $category->title) active @endif">
+                                <li onclick="searchByCategory({{ $cat->id }})"
+                                    class="@if ($cat->title == $category->title) active @endif">
                                     {{ $cat->title ?? '' }}
                                 </li>
                             @endforeach

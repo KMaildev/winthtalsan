@@ -39,7 +39,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container custom-nav position-relative">
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="logo">
+                    <img src="http://doublestrengthconstruction.com/data/weblogo.jpg" alt="logo">
                 </a>
 
                 <div class="mobile-menu-right">
@@ -63,30 +63,40 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript::void(0)" data-bs-toggle="dropdown">
-                                About
+                                About Us
                             </a>
                             <ul class="dropdown-menu fade-down">
                                 <li>
-                                    <a class="dropdown-item" href="service.html">
+                                    <a class="dropdown-item" href="{{ route('about.index') }}">
                                         About of Our Company
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="service.html">
+                                    <a class="dropdown-item" href="{{ route('md') }}">
                                         MD'S Message
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="service.html">
+                                    <a class="dropdown-item" href="{{ route('team') }}">
                                         Meet Our Team
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('services.index') }}">
+                                Our Services
+                            </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('projects.index') }}">
+                                Our Projects
+                            </a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript::void(0)" data-bs-toggle="dropdown">
@@ -110,26 +120,7 @@
                         </li>
                     </ul>
 
-                    <div class="nav-right">
-                        <div class="search-btn">
-                            <button type="button" class="nav-right-link"><i class="far fa-search"></i></button>
-                        </div>
-                        <div class="nav-right-btn mt-2">
-                            <a href="contact.html" class="theme-btn">Get A Quote<i
-                                    class="fas fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="search-area">
-                    <form action="#">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Type Keyword...">
-                            <button type="submit" class="search-icon-btn"><i class="far fa-search"></i></button>
-                        </div>
-                    </form>
-                </div>
-
             </div>
         </nav>
     </div>

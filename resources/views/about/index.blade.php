@@ -1,6 +1,20 @@
 @extends('layouts.main')
-@section('title', '- Welcome')
+@section('title', '- About Us')
 @section('content')
+
+    <div class="site-breadcrumb" style="background: url({{ asset('data/about-us-banner.jpg') }})">
+        <div class="container">
+            <h2 class="breadcrumb-title">
+                About of Our Company
+            </h2>
+            <ul class="breadcrumb-menu">
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li>
+                    About Us
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="about-area py-120">
         <div class="container">
@@ -84,58 +98,68 @@
     </div>
 
 
-    <div class="process-area">
+    <div class="counter-area pt-50 pb-50">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="site-heading text-center">
-                        <span class="site-title-tagline"><i class="far fa-lightbulb-on"></i> How It Works</span>
-                        <h2 class="site-title">Our Working <span>Process</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-between">
-                <div class="col-lg-3 col-md-6 text-center mb-30">
-                    <div class="process-single">
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
                         <div class="icon">
-                            <span>01</span>
-                            <i class="icon-office"></i>
+                            <i class="icon-project-management"></i>
                         </div>
-                        <h4>
-                            Discuss with clients
-                        </h4>
+                        <div>
+                            <span class="counter" data-count="+" data-to="500" data-speed="3000">500</span>
+                            <h6 class="title">+ Projects Done </h6>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-30">
-                    <div class="process-single">
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
                         <div class="icon">
-                            <span>02</span>
-                            <i class="icon-easy-installation"></i>
+                            <i class="icon-review"></i>
                         </div>
-                        <h4>Confirmation Service</h4>
+                        <div>
+                            <span class="counter" data-count="+" data-to="30" data-speed="3000">30</span>
+                            <h6 class="title">
+                                Current Projects
+                            </h6>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-30">
-                    <div class="process-single">
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
                         <div class="icon">
-                            <span>03</span>
-                            <i class="icon-diagnostic"></i>
+                            <i class="icon-worker-1"></i>
                         </div>
-                        <h4>Estimate Details</h4>
+                        <div>
+                            <span class="counter" data-count="+" data-to="50" data-speed="3000">50</span>
+                            <h6 class="title">
+                                Expert Employees
+                            </h6>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-30">
-                    <div class="process-single">
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="counter-box">
                         <div class="icon">
-                            <span>04</span>
-                            <i class="icon-satisfaction"></i>
+                            <i class="icon-guarantee"></i>
                         </div>
-                        <h4>Complete Your Works</h4>
+                        <div>
+                            <span class="counter" data-count="+" data-to="20" data-speed="3000">20</span>
+                            <h6 class="title">
+                                Our Experieces
+                            </h6>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
 
     <div class="faq-area py-120">
         <div class="container">
@@ -251,8 +275,7 @@
         </div>
     </div>
 
-
-    <div class="cta-area">
+    <div class="cta-area pt-100">
         <div class="container">
             <div class="cta-wrapper wow fadeInUp" data-wow-delay=".25s">
                 <div class="row align-items-center">
@@ -276,134 +299,59 @@
     </div>
 
 
-    <div class="blog-area py-5">
+    <div class="process-area pt-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
                     <div class="site-heading text-center">
-                        <span class="site-title-tagline">
-                            <i class="far fa-lightbulb-on"></i>
-                            Wint Htal San Co.,Ltd
-                        </span>
-                        <h2 class="site-title">Our <span>Projects</span></h2>
+                        <span class="site-title-tagline"><i class="far fa-lightbulb-on"></i> How It Works</span>
+                        <h2 class="site-title">Our Working <span>Process</span></h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                @foreach ($projects as $project)
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item wow fadeInUp" data-wow-delay=".25s">
-                            <div class="blog-item-img">
-                                <img src="{{ $project->project_photo }}" alt="Thumb"
-                                    style="width: 100%; height: 250px; background-size: center; object-fit: cover;">
-                                <div class="blog-date">
-                                    <i class="fal fa-check"></i>
-                                    {{ $project->project_status ?? '' }}
-                                    Project
-                                </div>
-                            </div>
-                            <div class="blog-item-info">
-                                <div class="blog-item-meta">
-                                    <ul>
-                                        <li>
-                                            <i class="far fa-user-circle"></i>
-                                            WINT HTAL SAN CO.,LTD
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h4 class="blog-title">
-                                    <a href="{{ route('projects.show', $project->id) }}" style="font-size: 18px;">
-                                        {{ $project->project_title ?? '' }}
-                                    </a>
-                                </h4>
-                                <a class="theme-btn" href="{{ route('projects.show', $project->id) }}">
-                                    Read More
-                                    <i class="fas fa-arrow-right-long"></i>
-                                </a>
-                            </div>
+            <div class="row justify-content-between">
+                <div class="col-lg-3 col-md-6 text-center mb-30">
+                    <div class="process-single">
+                        <div class="icon">
+                            <span>01</span>
+                            <i class="icon-office"></i>
                         </div>
+                        <h4>
+                            Discuss with clients
+                        </h4>
                     </div>
-                @endforeach
-
-                <div class="col-md-12">
-                    <center>
-                        <a href="{{ route('projects.index') }}" class="theme-btn mt-4">
-                            View All Projects
-                            <i class="fas fa-arrow-right-long"></i>
-                        </a>
-                    </center>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-30">
+                    <div class="process-single">
+                        <div class="icon">
+                            <span>02</span>
+                            <i class="icon-easy-installation"></i>
+                        </div>
+                        <h4>Confirmation Service</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-30">
+                    <div class="process-single">
+                        <div class="icon">
+                            <span>03</span>
+                            <i class="icon-diagnostic"></i>
+                        </div>
+                        <h4>Estimate Details</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center mb-30">
+                    <div class="process-single">
+                        <div class="icon">
+                            <span>04</span>
+                            <i class="icon-satisfaction"></i>
+                        </div>
+                        <h4>Complete Your Works</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-
-
-
-    <div class="portfolio-area py-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 d-lg-flex align-items-end justify-content-between mb-40">
-                    <div class="site-heading mb-0">
-                        <span class="site-title-tagline">
-                            <i class="far fa-lightbulb-on"></i>
-                            Gallery & Activities
-                        </span>
-                    </div>
-                    <div class="filter-control">
-                        <ul class="filter-btn">
-                            @foreach ($categories as $cat)
-                                <li onclick="searchByCategory({{ $cat->id }})" class="">
-                                    {{ $cat->title ?? '' }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row filter-box popup-gallery">
-                @foreach ($activities as $activity)
-                    @php
-                        $images = explode(',', $activity->images);
-                    @endphp
-                    @foreach ($images as $image)
-                        <div class="col-md-4 filter-item cat1 cat2">
-                            <div class="portfolio-item">
-                                <div class="portfolio-img">
-                                    <img src="{{ $image }}" alt>
-                                </div>
-                                <div class="portfolio-content">
-                                    <a class="popup-img portfolio-link" href="{{ $image }}">
-                                        <i class="fal fa-plus"></i>
-                                    </a>
-                                    <div class="portfolio-info">
-                                        <div class="portfolio-title-info">
-                                            <h5 class="portfolio-subtitle">
-                                                <span>//</span>
-                                                Wint Htal San Co.,Ltd
-                                            </h5>
-                                            <a href="portfolio-single.html">
-                                                <h4 class="portfolio-title">
-                                                    {{ $activity->title ?? '' }}
-                                                </h4>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                @endforeach
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-        function searchByCategory(id) {
-            window.location.href = "{{ url('activities') }}" + "/" + id;
-        }
-    </script>
+    
 @endsection
