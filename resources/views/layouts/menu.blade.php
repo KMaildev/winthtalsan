@@ -2,27 +2,34 @@
     <div class="header-top">
         <div class="container px-0">
             <div class="header-top-wrapper">
-                <div class="header-top-left">
+                <div class="header-top-left" style="padding-left: 50px;">
                     <div class="header-top-contact">
                         <ul>
+
                             <li>
-                                <a href="#">
+                                <a href="https://goo.gl/maps/HPrcjU2f5Wbm5XFM7" target="_blank">
                                     <i class="far fa-location-dot"></i>
-                                    Construction company
+                                    No.1250, Thakhin Ohn Pe Gyi Street, North Dagon Township, Yangon, Myanmar
                                 </a>
                             </li>
-                            <li><a
-                                    href="https://live.themewild.com/cdn-cgi/l/email-protection#3e575058517e5b465f534e525b105d5153"><i
-                                        class="far fa-envelopes"></i>
-                                    <span class="__cf_email__"
-                                        data-cfemail="98f1f6fef7d8fde0f9f5e8f4fdb6fbf7f5">[email&#160;protected]</span></a>
+
+                            <li>
+                                <a href="mailto:winthtesanoffice123636@gmail.com">
+                                    <i class="far fa-envelopes"></i>
+                                    winthtesanoffice123636@gmail.com
+                                </a>
                             </li>
-                            <li><a href="tel:+21236547898"><i class="far fa-phone-volume"></i> +2 123 654 7898</a>
+                            <li>
+                                <a href="tel:098622268">
+                                    <i class="far fa-phone-volume"></i>
+                                    098622268,  095433399
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="header-top-right">
+
+                {{-- <div class="header-top-right" style="padding-right: 50px;">
                     <div class="header-top-social">
                         <span>Follow Us: </span>
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -30,7 +37,7 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -39,7 +46,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container custom-nav position-relative">
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="http://doublestrengthconstruction.com/data/weblogo.jpg" alt="logo">
+                    <img src="{{ asset('data/logo.jpg') }}" alt="logo">
                 </a>
 
                 <div class="mobile-menu-right">
